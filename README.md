@@ -2,7 +2,7 @@
 
 In this guide, we'll walk you through the process of setting up automatic deployment for a golang application on an AWS EC2 instance by building a docker image and push it to docker hub using a `CI/CD` pipeline with GitHub Actions. We'll learn how to configure EC2 instance, set up GitHub repository, and create workflows that ensure the app is deployed seamlessly whenever we push changes to the main branch of our repository. Let's get started!
 
-![alt text](./images/archi.png)
+![alt text](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/archi.png?raw=true)
 
 ## Prerequisites
 1. **AWS Account**: Ensure you have an AWS account and proper permissions to create and manage EC2 instances.
@@ -154,7 +154,7 @@ This GitHub Actions workflow is set up to `build` and `deploy` a Go application 
 5. **Verify**:
    - Ensure secrets are correctly added and have the correct names (`PORT`, `DOCKER_USERNAME` and `DOCKER_PASSWORD`).
 
-![](./images/secrets.png)
+![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/secrets.png?raw=true)
 
 ## Setup AWS EC2 Instance
 
@@ -267,11 +267,11 @@ This will install the docker on the aws terminal.
     ![alt text](https://github.com/Minhaz00/NodeJS-Tasks/blob/main/14.%20Deploy%20Express%20App%20in%20EC2%20Using%20Github%C2%A0Action/images/image-4.png?raw=true)
 - Follow the commands provided to set up the runner on your EC2 instance.
 
-    ![](./images/runners.png)
+    ![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/runners.png?raw=true)
 
 - You will get something like this after the final command (marked portion):
 
-    ![](./images/githubaction.png)
+    ![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/githubaction.png?raw=true)
 
 ## Configuring the self-hosted runner application as a service
 Initially the runner in the github repository will be offline state if you exit the terminal. But You can configure the self-hosted runner application as a service to automatically start the runner application when the machine starts.
@@ -287,22 +287,22 @@ sudo ./svc.sh start
 
 Now the runner in the github repository is no more in Offline state:
 
-![](./images/idle%20runner.png)
+![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/idle%20runner.png?raw=true)
 
 
 ### Deploy and Verify
 1. **Push Changes to GitHub**: Commit and push changes to your GitHub repository.
 2. **Check GitHub Actions**: Ensure the workflow runs successfully and deploys the updated code to your EC2 instance.
 
-![](./images/build%20and%20deploy.png)
+![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/build%20and%20deploy.png?raw=true)
 
 *Build logs and deploy logs:*
 
-![](./images/mergelogs.png)
+![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/mergelogs.png?raw=true)
 
 3. Verify if the docker image is pushed to Docker hub successfully:
 
-![](./images/dockerhub.png)
+![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/dockerhub.png?raw=true)
 
 4. Now check in the aws terminal if the Docker container is running:
 
@@ -317,7 +317,7 @@ http://<public-ip>:8080
 
 You will see the go application is running.
 
-![](./images/output.png)
+![](https://github.com/Konami33/GO-app-with-github-action/blob/main/images/output.png?raw=true)
 
 So the new endpoint has been automatically added to our AWS deployment running as a docker container.
 
