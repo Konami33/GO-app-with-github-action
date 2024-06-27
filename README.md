@@ -1,4 +1,4 @@
-# Auto-Deploy Go App on AWS EC2 by Building a Docker Image and Publish it to Dockerhub using Github Actions with CI/CD Pipeline using GitHub Actions
+# Auto-Deploy Go App on AWS EC2 by Building a Docker Image and Publish it to Dockerhub with CI/CD Pipeline using GitHub Actions
 
 In this guide, we'll walk you through the process of setting up automatic deployment for a golang application on an AWS EC2 instance by building a docker image and push it to docker hub using a `CI/CD` pipeline with GitHub Actions. We'll learn how to configure EC2 instance, set up GitHub repository, and create workflows that ensure the app is deployed seamlessly whenever we push changes to the main branch of our repository. Let's get started!
 
